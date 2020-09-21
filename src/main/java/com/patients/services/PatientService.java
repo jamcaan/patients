@@ -7,9 +7,9 @@ import java.util.List;
 public interface PatientService {
 
     Patients getPatient(Long id);
-    Patients savePatient (Patients patients);
+    Patients savePatient(Patients patients);
     List<Patients> getAllPatients();
-    Patients updatePatient (Long id, Patients patients);
-    Patients getPatientsByEmail(String email);
+    Patients updatePatient(Long id, Patients patients);
     void deletePatient(Long id);
+    List<Patients> saveXmlDataFromUrl();
 }
