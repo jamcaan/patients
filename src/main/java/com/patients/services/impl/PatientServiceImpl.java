@@ -74,9 +74,14 @@ public class PatientServiceImpl implements PatientService {
     public void deletePatient(Long id) {
         patientsRepository.deleteById(id);
     }
+
+    /**
+     *
+     * Saving the response xml file to a directory
+     */
     @Override
     public List<Patients> saveXmlDataFromUrl(){
-            String dir =USER_FOLDER;
+            String dir = USER_FOLDER;
             try {
                 readFromUrl(dir + "\\datapoint.xml", XML_BASE_URL);
                 LOGGER.info("File is saved into that directory");
